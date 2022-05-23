@@ -58,6 +58,7 @@ export function EligibleChartsList() {
   let charts = Array.from(eligibleCharts(configState, gameData.songs));
   const songs = new Set<string>();
   const cards = charts
+    .sort((a, b) => (a.level > b.level) ? 1 : -1)
     .map((chart, index) => {
       songs.add(songKeyFromChart(chart));
       if (isDisplayFiltered && chart.flags.every((f) => f !== currentTab)) {
