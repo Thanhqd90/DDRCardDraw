@@ -47,7 +47,7 @@ export function Header() {
           <Button icon={IconNames.MENU} />
         </Popover2>
         <Navbar.Divider />
-        <Tooltip2 content="Change Song Data" placement="bottom">
+        <Tooltip2 content="Change Difficulty Range" placement="bottom">
           <VersionSelect />
         </Tooltip2>
         <DataLoadingSpinner />
