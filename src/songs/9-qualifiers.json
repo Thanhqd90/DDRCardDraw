@@ -1,0 +1,418 @@
+{
+  "meta": {
+    "styles": ["solo", "team"],
+    "difficulties": [
+      { "key": "basic", "color": "#03da00" },
+      { "key": "easy", "color": "#d3b211" },
+      { "key": "hard", "color": "#a90a12" },
+      { "key": "wild", "color": "#3406bc" },
+      { "key": "dual", "color": "#1d72af" },
+      { "key": "full", "color": "#00d0b8" },
+      { "key": "team", "color": "#c216ce" }
+    ],
+    "flags": ["andorfineMedia", "bassmonkeys", "cappRecords", "dimaMusic"],
+    "lvlMax": 28,
+    "lastUpdated": 1651354852324
+  },
+  "defaults": {
+    "style": "solo",
+    "difficulties": ["hard", "wild"],
+    "flags": ["andorfineMedia", "bassmonkeys", "cappRecords", "dimaMusic"],
+    "lowerLvlBound": 17,
+    "upperLvlBound": 20,
+    "chartCount": 5,
+    "useWeights": false,
+    "weights": []
+  },
+  "i18n": {
+    "en": {
+      "name": "Potential Qualifiers",
+      "solo": "Solo",
+      "basic": "Basic",
+      "easy": "Easy",
+      "hard": "Hard",
+      "wild": "Wild",
+      "dual": "Dual",
+      "full": "Full",
+      "team": "Team",
+      "andorfineMedia": "Andorfine Media",
+      "bassmonkeys": "The Bassmonkeys Pack",
+      "cappRecords": "CAPP Records",
+      "dimaMusic": "Dima Music",
+      "$abbr": {
+        "basic": "Basic",
+        "easy": "Easy",
+        "hard": "Hard",
+        "wild": "Wild",
+        "dual": "Dual",
+        "full": "Full",
+        "team": "Team"
+      }
+    }
+  },
+  "songs": [
+    {
+      "name": "Drifting Away",
+      "artist": "Filo Bedo",
+      "genre": "Pop",
+      "bpm": "143",
+      "jacket": "smx/DriftingAway.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 4,
+          "diffClass": "basic",
+          "author": "J. Kuret"
+        },
+        {
+          "style": "solo",
+          "lvl": 8,
+          "diffClass": "easy",
+          "author": "J. Kuret"
+        },
+        {
+          "style": "solo",
+          "lvl": 17,
+          "diffClass": "hard",
+          "author": "J. Kuret"
+        },
+        {
+          "style": "solo",
+          "lvl": 14,
+          "diffClass": "dual",
+          "author": "J. Kuret"
+        },
+        {
+          "style": "solo",
+          "lvl": 19,
+          "diffClass": "full",
+          "author": "J. Kuret"
+        },
+        {
+          "style": "team",
+          "lvl": 15,
+          "diffClass": "team",
+          "author": "J. Kuret"
+        }
+      ],
+      "saIndex": "295"
+    },
+    {
+      "name": "Hypnosis",
+      "artist": "Colin Kiddy",
+      "genre": "Techno",
+      "bpm": "180",
+      "jacket": "smx/Hypnosis.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 6,
+          "diffClass": "basic",
+          "author": "K. Ward"
+        },
+        { "style": "solo", "lvl": 12, "diffClass": "easy", "author": "P. Ump" },
+        { "style": "solo", "lvl": 17, "diffClass": "hard", "author": "I. Tee" },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "U. Getit"
+        },
+        { "style": "solo", "lvl": 16, "diffClass": "dual", "author": "A. Ndy" },
+        {
+          "style": "solo",
+          "lvl": 18,
+          "diffClass": "full",
+          "author": "M. Irrow"
+        },
+        { "style": "team", "lvl": 17, "diffClass": "team", "author": "P. Pro" }
+      ],
+      "saIndex": "420"
+    },
+    {
+      "name": "Land Of The Rising Sun",
+      "artist": "Spacekatz",
+      "genre": "Pop",
+      "bpm": "136",
+      "jacket": "smx/LandOfTheRisingSun.jpg",
+      "charts": [
+        { "style": "solo", "lvl": 3, "diffClass": "basic", "author": "B. Am" },
+        { "style": "solo", "lvl": 10, "diffClass": "easy", "author": "B. Am" },
+        {
+          "style": "solo",
+          "lvl": 17,
+          "diffClass": "hard",
+          "author": "K. Ward"
+        },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "J. Casarino & E. Sterling"
+        },
+        {
+          "style": "solo",
+          "lvl": 16,
+          "diffClass": "dual",
+          "author": "L. Striker"
+        },
+        { "style": "solo", "lvl": 17, "diffClass": "full", "author": "JBEAN" }
+      ],
+      "saIndex": "305"
+    },
+    {
+      "name": "Ra",
+      "artist": "Banzai",
+      "genre": "Ethnic House",
+      "bpm": "125",
+      "jacket": "smx/Ra.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 3,
+          "diffClass": "basic",
+          "author": "K. Ward"
+        },
+        {
+          "style": "solo",
+          "lvl": 8,
+          "diffClass": "easy",
+          "author": "L. Striker"
+        },
+        {
+          "style": "solo",
+          "lvl": 17,
+          "diffClass": "hard",
+          "author": "L. Striker"
+        },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "K. Ward"
+        },
+        {
+          "style": "solo",
+          "lvl": 18,
+          "diffClass": "dual",
+          "author": "L. Striker"
+        },
+        { "style": "solo", "lvl": 16, "diffClass": "full", "author": "JBEAN" },
+        { "style": "team", "lvl": 21, "diffClass": "team", "author": "JBEAN" }
+      ],
+      "saIndex": "310"
+    },
+    {
+      "name": "So Deep",
+      "artist": "Silvertear",
+      "genre": "Trance",
+      "bpm": "140",
+      "jacket": "smx/SoDeep.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 5,
+          "diffClass": "basic",
+          "author": "K. Ward"
+        },
+        { "style": "solo", "lvl": 9, "diffClass": "easy", "author": "K. Ward" },
+        {
+          "style": "solo",
+          "lvl": 17,
+          "diffClass": "hard",
+          "author": "B. Robbins"
+        },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "B. Robbins"
+        },
+        { "style": "solo", "lvl": 16, "diffClass": "dual", "author": "IC. U" },
+        { "style": "solo", "lvl": 21, "diffClass": "full", "author": "Miria" },
+        { "style": "team", "lvl": 24, "diffClass": "team", "author": "Miria" }
+      ],
+      "saIndex": "380"
+    },
+    {
+      "name": "Be Alive",
+      "artist": "Stian K",
+      "genre": "Hard House",
+      "bpm": "142",
+      "jacket": "smx/BeAlive.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 5,
+          "diffClass": "basic",
+          "author": "J. Time"
+        },
+        { "style": "solo", "lvl": 9, "diffClass": "easy", "author": "J. Time" },
+        {
+          "style": "solo",
+          "lvl": 14,
+          "diffClass": "hard",
+          "author": "K. Ward"
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "wild",
+          "author": "K. Ward"
+        },
+        { "style": "solo", "lvl": 14, "diffClass": "dual", "author": "JBEAN" },
+        { "style": "solo", "lvl": 22, "diffClass": "full", "author": "JBEAN" },
+        { "style": "team", "lvl": 15, "diffClass": "team", "author": "JBEAN" }
+      ],
+      "saIndex": "341"
+    },
+    {
+      "name": "Doh!",
+      "artist": "Tale & Dutch",
+      "genre": "Electro House",
+      "bpm": "128",
+      "jacket": "smx/Doh!.jpg",
+      "charts": [
+        { "style": "solo", "lvl": 2, "diffClass": "basic", "author": "Homer" },
+        { "style": "solo", "lvl": 7, "diffClass": "easy", "author": "T. Rex" },
+        {
+          "style": "solo",
+          "lvl": 16,
+          "diffClass": "hard",
+          "author": "T. Ceratops"
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "wild",
+          "author": "R. Aptor"
+        },
+        {
+          "style": "solo",
+          "lvl": 14,
+          "diffClass": "dual",
+          "author": "B. Saurus"
+        },
+        {
+          "style": "solo",
+          "lvl": 14,
+          "diffClass": "full",
+          "author": "D. Ipolosaurus"
+        },
+        { "style": "team", "lvl": 15, "diffClass": "team", "author": "S. Tego" }
+      ],
+      "saIndex": "419"
+    },
+    {
+      "name": "Mexi Mexi",
+      "artist": "Mozquito",
+      "genre": "Pop",
+      "bpm": "138",
+      "jacket": "smx/MexiMexi.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 1,
+          "diffClass": "basic",
+          "author": "K. Ward"
+        },
+        { "style": "solo", "lvl": 9, "diffClass": "easy", "author": "K. Ward" },
+        {
+          "style": "solo",
+          "lvl": 15,
+          "diffClass": "hard",
+          "author": "K. Ward"
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "wild",
+          "author": "K. Ward"
+        },
+        {
+          "style": "solo",
+          "lvl": 19,
+          "diffClass": "dual",
+          "author": "L. Striker"
+        },
+        { "style": "solo", "lvl": 20, "diffClass": "full", "author": "JBEAN" },
+        { "style": "team", "lvl": 15, "diffClass": "team", "author": "S. Fry" }
+      ],
+      "saIndex": "272"
+    },
+    {
+      "name": "Sky High",
+      "artist": "DJ Miko",
+      "genre": "Eurodance",
+      "bpm": "136",
+      "jacket": "smx/SkyHighDJMiko.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 2,
+          "diffClass": "basic",
+          "author": "Skywalker"
+        },
+        { "style": "solo", "lvl": 7, "diffClass": "easy", "author": "UNAGI" },
+        { "style": "solo", "lvl": 13, "diffClass": "hard", "author": "UNAGI" },
+        { "style": "solo", "lvl": 20, "diffClass": "wild", "author": "UNAGI" },
+        { "style": "solo", "lvl": 17, "diffClass": "dual", "author": "UNAGI" },
+        { "style": "solo", "lvl": 19, "diffClass": "full", "author": "UNAGI" },
+        { "style": "team", "lvl": 18, "diffClass": "team", "author": "Axel" }
+      ],
+      "saIndex": "460"
+    },
+    {
+      "name": "Stay",
+      "artist": "Tess",
+      "genre": "Eurodance",
+      "bpm": "140",
+      "jacket": "smx/Stay.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 4,
+          "diffClass": "basic",
+          "author": "K. Ward"
+        },
+        {
+          "style": "solo",
+          "lvl": 8,
+          "diffClass": "easy",
+          "author": "Jungle J."
+        },
+        {
+          "style": "solo",
+          "lvl": 16,
+          "diffClass": "hard",
+          "author": "Jungle J. & B. Robbins"
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "wild",
+          "author": "Jungle J."
+        },
+        {
+          "style": "solo",
+          "lvl": 18,
+          "diffClass": "dual",
+          "author": "Jungle J."
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "full",
+          "author": "Jungle J."
+        },
+        {
+          "style": "team",
+          "lvl": 21,
+          "diffClass": "team",
+          "author": "Jungle J."
+        }
+      ],
+      "saIndex": "381"
+    }
+      ]
+}
