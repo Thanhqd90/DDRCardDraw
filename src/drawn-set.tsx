@@ -43,12 +43,12 @@ export class DrawnSet extends Component<Props> {
   }
 
   renderChart = (chart: DrawnChart, index: number) => {
-    const veto = this.props.drawing.bans.find((b) => b.chartIndex === index);
+    const veto = this.props.drawing.bans.find((b) => b.chartId === chart.id);
     const protect = this.props.drawing.protects.find(
-      (b) => b.chartIndex === index
+      (b) => b.chartId === chart.id
     );
     const pocketPick = this.props.drawing.pocketPicks.find(
-      (b) => b.chartIndex === index
+      (b) => b.chartId === chart.id
     );
     return (
       <SongCard
@@ -57,19 +57,19 @@ export class DrawnSet extends Component<Props> {
           onVeto: this.handleBanProtectReplace.bind(
             this,
             this.props.drawing.bans,
-            index
+            chart.id as number,
           ),
           onProtect: this.handleBanProtectReplace.bind(
             this,
             this.props.drawing.protects,
-            index
+            chart.id as number
           ),
           onReplace: this.handleBanProtectReplace.bind(
             this,
             this.props.drawing.pocketPicks,
-            index
+            chart.id as number
           ),
-          onReset: this.handleReset.bind(this, index),
+          onReset: this.handleReset.bind(this, chart.id as number),
         }}
         vetoedBy={veto && veto.player}
         protectedBy={protect && protect.player}
@@ -80,14 +80,13 @@ export class DrawnSet extends Component<Props> {
       />
     );
   };
-
   handleBanProtectReplace(
     arr: Array<PlayerActionOnChart> | Array<PocketPick>,
-    chartIndex: number,
+    chartId: number,
     player: 1 | 2,
-    chart?: DrawnChart
+    chart: DrawnChart,
   ) {
-    const existingBanIndex = arr.findIndex((b) => b.chartIndex === chartIndex);
+    const existingBanIndex = arr.findIndex((b) => b.chartId === chart?.id);
     if (existingBanIndex >= 0) {
       arr.splice(existingBanIndex, 1);
     } else {
@@ -96,15 +95,15 @@ export class DrawnSet extends Component<Props> {
     }
     this.forceUpdate();
   }
-
-  handleReset(chartIndex: number) {
+  
+  handleReset(chartId: number) {
     const drawing = this.props.drawing;
-    drawing.bans = drawing.bans.filter((p) => p.chartIndex !== chartIndex);
+    drawing.bans = drawing.bans.filter((p) => p.chartId !== chartId);
     drawing.protects = drawing.protects.filter(
-      (p) => p.chartIndex !== chartIndex
+      (p) => p.chartId !== chartId
     );
     drawing.pocketPicks = drawing.pocketPicks.filter(
-      (p) => p.chartIndex !== chartIndex
+      (p) => p.chartId !== chartId
     );
     this.forceUpdate();
   }
