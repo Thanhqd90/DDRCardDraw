@@ -10,14 +10,14 @@
       { "key": "full", "color": "#00d0b8" },
       { "key": "team", "color": "#c216ce" }
     ],
-    "flags": ["andorfineMedia", "bassmonkeys", "cappRecords", "dimaMusic"],
+    "flags": ["andorfineMedia", "bassmonkeys", "cappRecords", "dimaMusic", "orderByPocketPick"],
     "lvlMax": 28,
     "lastUpdated": 1651354852324
   },
   "defaults": {
     "style": "solo",
     "difficulties": ["wild"],
-    "flags": [],
+    "flags": ["orderByPocketPick"],
     "lowerLvlBound": 20,
     "upperLvlBound": 24,
     "chartCount": 13,
@@ -39,6 +39,7 @@
       "bassmonkeys": "The Bassmonkeys Pack",
       "cappRecords": "CAPP Records",
       "dimaMusic": "Dima Music",
+      "orderByPocketPick": "Enable Order by Protect/Pocket Pick",
       "$abbr": {
         "basic": "Basic",
         "easy": "Easy",
@@ -12823,6 +12824,488 @@
           "author": "Lazer Kat"
         },
         { "style": "team", "lvl": 18, "diffClass": "team", "author": "S. Kimo" }
+      ]
+    },
+    {
+      "saIndex": "530",
+      "name": "Art City",
+      "artist": "Virgill",
+      "genre": "Funk",
+      "bpm": "122",
+      "jacket": "smx/ArtCity.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 2,
+          "diffClass": "basic",
+          "author": "Picasso"
+        },
+        { "style": "solo", "lvl": 7, "diffClass": "easy", "author": "M. Lisa" },
+        {
+          "style": "solo",
+          "lvl": 14,
+          "diffClass": "hard",
+          "author": "S. Dali"
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "wild",
+          "author": "Beanangelo"
+        },
+        {
+          "style": "solo",
+          "lvl": 16,
+          "diffClass": "dual",
+          "author": "M. Lisa"
+        },
+        { "style": "solo", "lvl": 18, "diffClass": "full", "author": "S. Fry" },
+        { "style": "team", "lvl": 10, "diffClass": "team", "author": "S. Dali" }
+      ]
+    },
+    {
+      "saIndex": "531",
+      "name": "Bewitched",
+      "artist": "PIXY",
+      "genre": "K-Pop",
+      "bpm": "110",
+      "jacket": "smx/Bewitched.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 2,
+          "diffClass": "basic",
+          "author": "Mr. Mirage"
+        },
+        { "style": "solo", "lvl": 9, "diffClass": "easy", "author": "Salem" },
+        {
+          "style": "solo",
+          "lvl": 14,
+          "diffClass": "hard",
+          "author": "S. Spellman"
+        },
+        { "style": "solo", "lvl": 22, "diffClass": "wild", "author": "JBEAN" },
+        { "style": "solo", "lvl": 19, "diffClass": "dual", "author": "Salem" },
+        { "style": "solo", "lvl": 22, "diffClass": "full", "author": "JBEAN" },
+        {
+          "style": "team",
+          "lvl": 19,
+          "diffClass": "team",
+          "author": "S. Spellman"
+        }
+      ]
+    },
+    {
+      "saIndex": "532",
+      "name": "Cosmic Drive",
+      "artist": "Quiqman",
+      "genre": "Eurobeat",
+      "bpm": "154",
+      "jacket": "smx/CosmicDrive.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 2,
+          "diffClass": "basic",
+          "author": "Relay Racer"
+        },
+        {
+          "style": "solo",
+          "lvl": 9,
+          "diffClass": "easy",
+          "author": "Initial Me"
+        },
+        { "style": "solo", "lvl": 15, "diffClass": "hard", "author": "Sigma" },
+        { "style": "solo", "lvl": 22, "diffClass": "wild", "author": "Sigma" },
+        { "style": "solo", "lvl": 16, "diffClass": "dual", "author": "Sigma" },
+        { "style": "solo", "lvl": 22, "diffClass": "full", "author": "Sigma" },
+        { "style": "team", "lvl": 21, "diffClass": "team", "author": "Sigma" }
+      ]
+    },
+    {
+      "saIndex": "533",
+      "name": "Have Fun",
+      "artist": "Rameses B",
+      "genre": "Drum & Bass",
+      "bpm": "87-174",
+      "jacket": "smx/HaveFun.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 2,
+          "diffClass": "basic",
+          "author": "Coast Busters"
+        },
+        {
+          "style": "solo",
+          "lvl": 10,
+          "diffClass": "easy",
+          "author": "Goin Light"
+        },
+        {
+          "style": "solo",
+          "lvl": 16,
+          "diffClass": "hard",
+          "author": "K. Ward"
+        },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "K. Ward"
+        },
+        {
+          "style": "solo",
+          "lvl": 19,
+          "diffClass": "dual",
+          "author": "R. Frazee"
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "full",
+          "author": "R. Frazee"
+        },
+        { "style": "team", "lvl": 21, "diffClass": "team", "author": "JBEAN" }
+      ]
+    },
+    {
+      "saIndex": "534",
+      "name": "Pump It",
+      "artist": "Electric Callboy",
+      "genre": "Electronic Metal",
+      "bpm": "174",
+      "jacket": "smx/PumpIt.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 3,
+          "diffClass": "basic",
+          "author": "Gym Rat"
+        },
+        {
+          "style": "solo",
+          "lvl": 9,
+          "diffClass": "easy",
+          "author": "Scrambled Legs"
+        },
+        {
+          "style": "solo",
+          "lvl": 15,
+          "diffClass": "hard",
+          "author": "Flex Appeal"
+        },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "Lazer Puppers"
+        },
+        {
+          "style": "solo",
+          "lvl": 19,
+          "diffClass": "dual",
+          "author": "Bulky Beast"
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "full",
+          "author": "Lazer Puppers"
+        },
+        {
+          "style": "team",
+          "lvl": 17,
+          "diffClass": "team",
+          "author": "T. Little"
+        }
+      ]
+    },
+    {
+      "saIndex": "535",
+      "name": "All For One",
+      "artist": "IVD x Dee Dee x Kenny Hayes",
+      "genre": "Progressive Trance",
+      "bpm": "150",
+      "jacket": "smx/AllForOne.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 3,
+          "diffClass": "basic",
+          "author": "Class Clown"
+        },
+        {
+          "style": "solo",
+          "lvl": 8,
+          "diffClass": "easy",
+          "author": "Over Achiever"
+        },
+        {
+          "style": "solo",
+          "lvl": 15,
+          "diffClass": "hard",
+          "author": "Dreamsicle"
+        },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "J. Bratt"
+        },
+        {
+          "style": "solo",
+          "lvl": 16,
+          "diffClass": "dual",
+          "author": "Flower Power"
+        },
+        { "style": "solo", "lvl": 18, "diffClass": "full", "author": "JBEAN" },
+        {
+          "style": "team",
+          "lvl": 19,
+          "diffClass": "team",
+          "author": "J. Rider"
+        }
+      ]
+    },
+    {
+      "saIndex": "536",
+      "name": "How We Win",
+      "artist": "FWLR",
+      "genre": "Electro",
+      "bpm": "126",
+      "jacket": "smx/HowWeWin.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 3,
+          "diffClass": "basic",
+          "author": "Cheeky Chimp"
+        },
+        { "style": "solo", "lvl": 9, "diffClass": "easy", "author": "Sue She" },
+        {
+          "style": "solo",
+          "lvl": 16,
+          "diffClass": "hard",
+          "author": "Couch Tomato"
+        },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "BaBaBooie"
+        },
+        {
+          "style": "solo",
+          "lvl": 19,
+          "diffClass": "dual",
+          "author": "Chunkamunk"
+        },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "full",
+          "author": "Poochie Woochie"
+        },
+        {
+          "style": "team",
+          "lvl": 19,
+          "diffClass": "team",
+          "author": "Mystic Goddess"
+        }
+      ]
+    },
+    {
+      "saIndex": "537",
+      "name": "Ooh La La La",
+      "artist": "E-Rotic",
+      "genre": "Eurodance",
+      "bpm": "147",
+      "jacket": "smx/OohLaLaLa.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 3,
+          "diffClass": "basic",
+          "author": "Mamma Llama"
+        },
+        {
+          "style": "solo",
+          "lvl": 9,
+          "diffClass": "easy",
+          "author": "Cream of Passion"
+        },
+        {
+          "style": "solo",
+          "lvl": 15,
+          "diffClass": "hard",
+          "author": "Doctor Deck"
+        },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "Sensual Cactus"
+        },
+        {
+          "style": "solo",
+          "lvl": 18,
+          "diffClass": "dual",
+          "author": "Big Palm Tree"
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "full",
+          "author": "Mystic Goddess"
+        },
+        {
+          "style": "team",
+          "lvl": 20,
+          "diffClass": "team",
+          "author": "Lee Nover"
+        }
+      ]
+    },
+    {
+      "saIndex": "538",
+      "name": "Stop Me",
+      "artist": "Natsume Oki",
+      "genre": "Eurobeat",
+      "bpm": "154",
+      "jacket": "smx/StopMe.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 2,
+          "diffClass": "basic",
+          "author": "Zipity Doo"
+        },
+        {
+          "style": "solo",
+          "lvl": 9,
+          "diffClass": "easy",
+          "author": "M.C. Hampster"
+        },
+        { "style": "solo", "lvl": 16, "diffClass": "hard", "author": "S. Fry" },
+        {
+          "style": "solo",
+          "lvl": 21,
+          "diffClass": "wild",
+          "author": "J. Rider"
+        },
+        { "style": "solo", "lvl": 14, "diffClass": "dual", "author": "S. Fry" },
+        {
+          "style": "solo",
+          "lvl": 18,
+          "diffClass": "full",
+          "author": "J. Rider"
+        },
+        {
+          "style": "team",
+          "lvl": 20,
+          "diffClass": "team",
+          "author": "J. Rider"
+        }
+      ]
+    },
+    {
+      "saIndex": "539",
+      "name": "Villain",
+      "artist": "PIXY",
+      "genre": "K-Pop",
+      "bpm": "101",
+      "jacket": "smx/Villain.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 3,
+          "diffClass": "basic",
+          "author": "Sam Sun"
+        },
+        {
+          "style": "solo",
+          "lvl": 8,
+          "diffClass": "easy",
+          "author": "Babydoodles"
+        },
+        {
+          "style": "solo",
+          "lvl": 15,
+          "diffClass": "hard",
+          "author": "Butterball"
+        },
+        {
+          "style": "solo",
+          "lvl": 20,
+          "diffClass": "wild",
+          "author": "Bubble B."
+        },
+        {
+          "style": "solo",
+          "lvl": 19,
+          "diffClass": "dual",
+          "author": "Queen Bae"
+        },
+        {
+          "style": "solo",
+          "lvl": 22,
+          "diffClass": "full",
+          "author": "H. J. Peabody"
+        },
+        {
+          "style": "team",
+          "lvl": 17,
+          "diffClass": "team",
+          "author": "H. J. Peabody"
+        }
+      ]
+    },
+    {
+      "saIndex": "540",
+      "name": "VTubers Never Die!",
+      "artist": "NAOKI & Eternal JK Yoripi-chan feat. Riyu Kos",
+      "genre": "J-Pop",
+      "bpm": "170",
+      "jacket": "smx/VtubersNeverDie.jpg",
+      "charts": [
+        {
+          "style": "solo",
+          "lvl": 3,
+          "diffClass": "basic",
+          "author": "Diva Dave"
+        },
+        {
+          "style": "solo",
+          "lvl": 11,
+          "diffClass": "easy",
+          "author": "Y. Tube"
+        },
+        {
+          "style": "solo",
+          "lvl": 17,
+          "diffClass": "hard",
+          "author": "Y. Tube"
+        },
+        {
+          "style": "solo",
+          "lvl": 23,
+          "diffClass": "wild",
+          "author": "JBEANTUBER"
+        },
+        {
+          "style": "solo",
+          "lvl": 18,
+          "diffClass": "dual",
+          "author": "V. Girl"
+        },
+        {
+          "style": "solo",
+          "lvl": 23,
+          "diffClass": "full",
+          "author": "JBEANTUBER"
+        },
+        { "style": "team", "lvl": 22, "diffClass": "team", "author": "V. Girl" }
       ]
     }
   ]
