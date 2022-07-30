@@ -16,13 +16,10 @@
   },
   "defaults": {
     "style": "solo",
-    "difficulties": ["hard"],
-    "flags": [],
-    "lowerLvlBound": 14,
-    "upperLvlBound": 16,
-    "chartCount": 7,
-    "useWeights": true,
-    "weights": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 2]
+    "difficulties": ["wild", "hard"],
+    "flags": ["orderByPocketPick"],
+    "lowerLvlBound": 18,
+    "upperLvlBound": 22
   },
   "i18n": {
     "en": {
