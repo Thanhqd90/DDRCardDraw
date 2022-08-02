@@ -92,7 +92,6 @@ export function SongCard(props: Props) {
   return (
     <div
       className={rootClassname}
-      style={{order: turnOrder ? turnOrder :99}}
       onClick={
         showingIconMenu || hasLabel || pocketPickForPlayer
           ? undefined
