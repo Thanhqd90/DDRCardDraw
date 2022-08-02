@@ -10,21 +10,9 @@
       { "key": "full", "color": "#00d0b8" },
       { "key": "team", "color": "#c216ce" }
     ],
-<<<<<<< HEAD
-    "flags": [
-      "andorfineMedia",
-      "bassmonkeys",
-      "cappRecords",
-      "dimaMusic",
-      "orderByPocketPick"
-    ],
-    "lvlMax": 28,
-    "lastUpdated": 1659214034537
-=======
     "flags": ["andorfineMedia", "bassmonkeys", "cappRecords", "dimaMusic"],
     "lvlMax": 28,
     "lastUpdated": 1658961112371
->>>>>>> f4f32df6dfb97efd230abc5929d0d69266711c5a
   },
   "defaults": {
     "style": "solo",
