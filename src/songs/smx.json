@@ -10,6 +10,7 @@
       { "key": "full", "color": "#00d0b8" },
       { "key": "team", "color": "#c216ce" }
     ],
+<<<<<<< HEAD
     "flags": [
       "andorfineMedia",
       "bassmonkeys",
@@ -19,11 +20,16 @@
     ],
     "lvlMax": 28,
     "lastUpdated": 1659214034537
+=======
+    "flags": ["andorfineMedia", "bassmonkeys", "cappRecords", "dimaMusic"],
+    "lvlMax": 28,
+    "lastUpdated": 1658961112371
+>>>>>>> f4f32df6dfb97efd230abc5929d0d69266711c5a
   },
   "defaults": {
     "style": "solo",
     "difficulties": ["wild", "hard"],
-    "flags": ["orderByPocketPick"],
+    "flags": [],
     "lowerLvlBound": 18,
     "upperLvlBound": 22
   },
@@ -42,7 +48,6 @@
       "bassmonkeys": "The Bassmonkeys Pack",
       "cappRecords": "CAPP Records",
       "dimaMusic": "Dima Music",
-      "orderByPocketPick": "Enable Order by Protect/Pocket Pick",
       "$abbr": {
         "basic": "Basic",
         "easy": "Easy",
