@@ -13,7 +13,6 @@ import { useForceUpdate } from "./hooks/useForceUpdate";
 
 const HUE_STEP = (255 / 8) * 3;
 let hue = Math.floor(Math.random() * 255);
-let turnCounter = 0;
 
 function getRandomGradiant() {
   hue += HUE_STEP;
@@ -59,7 +58,6 @@ function DrawnSetImpl({ drawing }: Props) {
         replacedBy={pocketPick && pocketPick.player}
         replacedWith={pocketPick && pocketPick.pick}
         chart={chart}
-        turnOrder={turnCounter}
       />
     );
   }
