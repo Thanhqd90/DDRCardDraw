@@ -10,6 +10,8 @@ import {
 } from "./models/Drawing";
 import { ConfigStateContext } from "./config-state";
 import { useForceUpdate } from "./hooks/useForceUpdate";
+import { draw } from "./card-draw";
+import { DrawStateContext } from "./draw-state";
 
 const HUE_STEP = (255 / 8) * 3;
 let hue = Math.floor(Math.random() * 255);
@@ -25,7 +27,8 @@ interface Props {
 
 function DrawnSetImpl({ drawing }: Props) {
   const forceUpdate = useForceUpdate();
-  const { orderByAction } = useContext(ConfigStateContext);
+  const { gameData } = useContext(DrawStateContext);
+  const configState = useContext(ConfigStateContext);
   const [backgroundImage] = useState(getRandomGradiant());
 
   function renderChart(chart: DrawnChart) {
@@ -39,19 +42,20 @@ function DrawnSetImpl({ drawing }: Props) {
           onVeto: handleBanProtectReplace.bind(
             undefined,
             drawing.bans,
-            chart.id as number
+            chart.id!
           ),
           onProtect: handleBanProtectReplace.bind(
             undefined,
             drawing.protects,
-            chart.id as number
+            chart.id!
           ),
           onReplace: handleBanProtectReplace.bind(
             undefined,
             drawing.pocketPicks,
-            chart.id as number
+            chart.id!
           ),
-          onReset: handleReset.bind(undefined, chart.id as number),
+          onRedraw: handleRedraw.bind(undefined, chart.id!),
+          onReset: handleReset.bind(undefined, chart.id!),
         }}
         vetoedBy={veto && veto.player}
         protectedBy={protect && protect.player}
@@ -75,7 +79,7 @@ function DrawnSetImpl({ drawing }: Props) {
     player: 1 | 2,
     chart?: DrawnChart
   ) {
-    if (orderByAction) {
+    if (configState.orderByAction) {
       const indexToCut = drawing.charts.findIndex(
         (chart) => chart.id === chartId
       );
@@ -98,6 +102,18 @@ function DrawnSetImpl({ drawing }: Props) {
     } else {
       arr.push({ player, pick: chart!, chartId });
     }
+    forceUpdate();
+  }
+
+  function handleRedraw(chartId: number) {
+    const newDrawing = draw(gameData!, { ...configState, chartCount: 1 });
+    newDrawing.charts[0].id = chartId;
+    drawing.charts = drawing.charts.map((chart) => {
+      if (chart.id === chartId) {
+        return newDrawing.charts[0];
+      }
+      return chart;
+    });
     forceUpdate();
   }
 
