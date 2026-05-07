@@ -61,6 +61,8 @@ export interface StartggGauntletMeta extends StartggMeta {
   id: string;
   /** first index is entrant ID, second index is the drawn chart ID */
   scoresByEntrant?: Record<string, Record<string, number | undefined>>;
+  /** whether to use points-awarded mode for automatic point calculation */
+  pointsAwardedMode?: boolean;
 }
 
 export interface SimpleMeta {

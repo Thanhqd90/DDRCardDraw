@@ -245,9 +245,7 @@ export function DrawingActions() {
   const isGauntlet =
     drawingMeta.type === "startgg" && drawingMeta.subtype === "gauntlet";
   const { showBoundary } = useErrorBoundary();
-  const [gauntletEditorMeta, setGauntletEditorMeta] = useState<
-    StartggGauntletMeta | undefined
-  >(undefined);
+  const [gauntletEditorOpen, setGauntletEditorOpen] = useState(false);
 
   const addToCabMenu = (
     <Menu>
@@ -334,18 +332,18 @@ export function DrawingActions() {
               variant="minimal"
               icon={<Th />}
               onClick={() => {
-                setGauntletEditorMeta(drawingMeta);
+                setGauntletEditorOpen(true);
               }}
             />
           </Tooltip>
           <Dialog
-            onClose={() => setGauntletEditorMeta(undefined)}
-            isOpen={!!gauntletEditorMeta}
+            onClose={() => setGauntletEditorOpen(false)}
+            isOpen={gauntletEditorOpen}
             title="Gauntlet Scores Editor"
             style={{ width: "auto" }}
           >
             <DialogBody>
-              <GauntletEditor meta={gauntletEditorMeta!} />
+              <GauntletEditor meta={drawingMeta} />
             </DialogBody>
           </Dialog>
         </>
