@@ -171,15 +171,33 @@ function CabSummary({ cab }: { cab: CabInfo }) {
           stub="players"
           cabId={cab.id}
         />
-        {playerObsSourceItems.map((item) => (
-          <CopySourceMenuItem
-            key={item.stub}
-            icon={<Person />}
-            text={item.text}
-            stub={item.stub}
-            cabId={cab.id}
-          />
-        ))}
+        {Array.from({ length: playerCount }, (_, index) => {
+          const playerNumber = index + 1;
+
+          return (
+            <MenuItem
+              key={`player-${playerNumber}`}
+              icon={<Person />}
+              text={`Player ${playerNumber}`}
+            >
+              <CopySourceMenuItem
+                text="Full"
+                stub={`p${playerNumber}`}
+                cabId={cab.id}
+              />
+              <CopySourceMenuItem
+                text="Name"
+                stub={`p${playerNumber}-name`}
+                cabId={cab.id}
+              />
+              <CopySourceMenuItem
+                text="Score"
+                stub={`p${playerNumber}-score`}
+                cabId={cab.id}
+              />
+            </MenuItem>
+          );
+        })}
       </MenuItem>
 
       <MenuItem icon={<Remove />} text="Remove Cab" onClick={removeCab} />
