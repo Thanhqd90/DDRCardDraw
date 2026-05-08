@@ -34,6 +34,35 @@ import { drawingsSlice } from "../state/drawings.slice";
 import { copyObsSource, routableCabSourcePath } from "./copy-obs-source";
 import { useHref } from "react-router-dom";
 
+const MAX_OBS_PLAYERS = 8;
+const DEFAULT_OBS_PLAYERS = 2;
+
+function getPlayerObsSourceItems(playerCount: number) {
+  const safePlayerCount = Math.min(
+    Math.max(playerCount, DEFAULT_OBS_PLAYERS),
+    MAX_OBS_PLAYERS,
+  );
+
+  return Array.from({ length: safePlayerCount }, (_, index) => {
+    const playerNumber = index + 1;
+
+    return [
+      {
+        text: `Player ${playerNumber}`,
+        stub: `p${playerNumber}`,
+      },
+      {
+        text: `Player ${playerNumber} Name`,
+        stub: `p${playerNumber}-name`,
+      },
+      {
+        text: `Player ${playerNumber} Score`,
+        stub: `p${playerNumber}-score`,
+      },
+    ];
+  }).flat();
+}
+
 export function CabManagement() {
   const [isCollapsed, setCollapsed] = useState(true);
   const cabs = useAppState(eventSlice.selectors.allCabs);
@@ -104,6 +133,17 @@ function CabSummary({ cab }: { cab: CabInfo }) {
     [dispatch, cab.id],
   );
 
+  const drawing = useAppState((s) => {
+    if (!cab.activeMatch) return null;
+    if (typeof cab.activeMatch === "string") {
+      return s.drawings.entities[cab.activeMatch];
+    }
+    return drawingsSlice.selectors.selectMergedByCompoundId(s, cab.activeMatch);
+  });
+
+  const playerCount = drawing?.playerDisplayOrder.length ?? DEFAULT_OBS_PLAYERS;
+  const playerObsSourceItems = getPlayerObsSourceItems(playerCount);
+
   const sourcesMenu = (
     <Menu>
       <MenuItem icon={<MobileVideo />} text="OBS Sources">
@@ -131,42 +171,15 @@ function CabSummary({ cab }: { cab: CabInfo }) {
           stub="players"
           cabId={cab.id}
         />
-        <CopySourceMenuItem
-          icon={<Person />}
-          text="Player 1"
-          stub="p1"
-          cabId={cab.id}
-        />
-        <CopySourceMenuItem
-          icon={<Person />}
-          text="Player 1 Name"
-          stub="p1-name"
-          cabId={cab.id}
-        />
-        <CopySourceMenuItem
-          icon={<Person />}
-          text="Player 1 Score"
-          stub="p1-score"
-          cabId={cab.id}
-        />
-        <CopySourceMenuItem
-          icon={<Person />}
-          text="Player 2"
-          stub="p2"
-          cabId={cab.id}
-        />
-        <CopySourceMenuItem
-          icon={<Person />}
-          text="Player 2 Name"
-          stub="p2-name"
-          cabId={cab.id}
-        />
-        <CopySourceMenuItem
-          icon={<Person />}
-          text="Player 2 Score"
-          stub="p2-score"
-          cabId={cab.id}
-        />
+        {playerObsSourceItems.map((item) => (
+          <CopySourceMenuItem
+            key={item.stub}
+            icon={<Person />}
+            text={item.text}
+            stub={item.stub}
+            cabId={cab.id}
+          />
+        ))}
       </MenuItem>
 
       <MenuItem icon={<Remove />} text="Remove Cab" onClick={removeCab} />

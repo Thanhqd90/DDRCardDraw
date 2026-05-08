@@ -28,6 +28,40 @@ import { ClassicModeShell } from "./classic-mode";
 import { useMemo } from "react";
 import { ToasterHost } from "./toaster";
 
+const MAX_OBS_PLAYERS = 8;
+
+const playerObsRoutes = Array.from({ length: MAX_OBS_PLAYERS }, (_, index) => {
+  const playerNumber = index + 1;
+
+  return [
+    {
+      path: `p${playerNumber}`,
+      lazy: async () => {
+        const { CabPlayer } = await import("./obs-sources/text");
+        return { element: <CabPlayer p={playerNumber} /> };
+      },
+    },
+    {
+      path: `p${playerNumber}-name`,
+      lazy: async () => {
+        const { CabPlayer } = await import("./obs-sources/text");
+        return {
+          element: <CabPlayer p={playerNumber} displayType="Name" />,
+        };
+      },
+    },
+    {
+      path: `p${playerNumber}-score`,
+      lazy: async () => {
+        const { CabPlayer } = await import("./obs-sources/text");
+        return {
+          element: <CabPlayer p={playerNumber} displayType="Score" />,
+        };
+      },
+    },
+  ];
+}).flat();
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -174,48 +208,7 @@ const router = createBrowserRouter([
           return { Component: CabPlayers };
         },
       },
-      {
-        path: "p1",
-        lazy: async () => {
-          const { CabPlayer } = await import("./obs-sources/text");
-          return { element: <CabPlayer p={1} /> };
-        },
-      },
-      {
-        path: "p1-name",
-        lazy: async () => {
-          const { CabPlayer } = await import("./obs-sources/text");
-          return { element: <CabPlayer p={1} displayType="Name" /> };
-        },
-      },
-      {
-        path: "p1-score",
-        lazy: async () => {
-          const { CabPlayer } = await import("./obs-sources/text");
-          return { element: <CabPlayer p={1} displayType="Score" /> };
-        },
-      },
-      {
-        path: "p2",
-        lazy: async () => {
-          const { CabPlayer } = await import("./obs-sources/text");
-          return { element: <CabPlayer p={2} /> };
-        },
-      },
-      {
-        path: "p2-name",
-        lazy: async () => {
-          const { CabPlayer } = await import("./obs-sources/text");
-          return { element: <CabPlayer p={2} displayType="Name" /> };
-        },
-      },
-      {
-        path: "p2-score",
-        lazy: async () => {
-          const { CabPlayer } = await import("./obs-sources/text");
-          return { element: <CabPlayer p={2} displayType="Score" /> };
-        },
-      },
+      ...playerObsRoutes,
     ],
   },
 ]);
