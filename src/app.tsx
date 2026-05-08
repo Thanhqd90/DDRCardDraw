@@ -202,6 +202,15 @@ const router = createBrowserRouter([
         },
       },
       {
+        path: "gauntlet-table",
+        lazy: async () => {
+          const { GauntletTableSource } = await import(
+            "./obs-sources/gauntlet-table"
+          );
+          return { Component: GauntletTableSource };
+        },
+      },
+      {
         path: "players",
         lazy: async () => {
           const { CabPlayers } = await import("./obs-sources/text");

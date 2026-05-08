@@ -1,0 +1,35 @@
+.gauntlet-table-source {
+  font-family: Arial, sans-serif;
+  color: white;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gauntlet-table-source h1 {
+  font-size: 36px;
+  margin: 0 0 20px;
+}
+
+.gauntlet-table-source table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 24px;
+}
+
+.gauntlet-table-source th,
+.gauntlet-table-source td {
+  padding: 12px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  text-align: center;
+}
+
+.gauntlet-table-source th:first-child,
+.gauntlet-table-source td:first-child {
+  text-align: left;
+}
+
+.gauntlet-table-source td:last-child,
+.gauntlet-table-source th:last-child {
+  font-weight: 700;
+}

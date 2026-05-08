@@ -166,6 +166,12 @@ function CabSummary({ cab }: { cab: CabInfo }) {
           cabId={cab.id}
         />
         <CopySourceMenuItem
+          icon={<DiagramTree />}
+          text="Gauntlet Table"
+          stub="gauntlet-table"
+          cabId={cab.id}
+        />
+        <CopySourceMenuItem
           icon={<People />}
           text="All Players"
           stub="players"
